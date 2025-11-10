@@ -1,13 +1,21 @@
-# Faça um programa que pergunte o preço de três produtos e 
-# informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
+# Faça um Programa que leia três números e mostre o maior e o menor deles.
 
-produto1 = float(input("Digite o 1º produto: "))
-produto2 = float(input("Digite o 2º produto: "))
-produto3 = float(input("Digite o 3º produto: "))
+numero1 = float(input("Digite o 1º número: "))
+numero2 = float(input("Digite o 2º número: "))
+numero3 = float(input("Digite o 3º número: "))
 
-if produto1 < produto2 and produto1 < produto3:
-    print("O 1º produto é o mais barato deles!")
-elif produto2 < produto1 and produto2 < produto3:
-    print("O 2º produto é o mais barato deles!")
-elif produto3 < produto1 and produto3 < produto2:
-    print("O 3º produto é o mais barato deles!")
+maior = numero1
+menor = numero1
+
+if numero2 > maior:
+    maior = numero2
+if numero3 > maior:
+    maior = numero3
+
+if numero2 < menor:
+    menor = numero2
+if numero3 < menor:
+    menor = numero3
+
+print(f"Maior: {maior:.2f}")
+print(f"Menor: {menor:.2f}")
